@@ -9,8 +9,7 @@
 *credentials*
 
 # Local expert libraries and environments (large, third-party, machine-specific)
-skill-library/
-experts/
+/skill-library/
 .venv/
 *.egg-info/
 __pycache__/
