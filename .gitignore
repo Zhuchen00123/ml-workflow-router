@@ -1,0 +1,22 @@
+# Local, machine-specific configuration — do not commit
+config.json
+
+# Secrets and credentials that must never land in a public repo
+.env
+.env.*
+*.token
+*credentials*
+
+# Local expert libraries and environments (large, third-party, machine-specific)
+skill-library/
+experts/
+.venv/
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

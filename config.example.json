@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "project_root": "<absolute path to the ML project that holds your expert library and environment status>",
+  "expert_library": "<project_root>/skill-library/experts",
+  "status_file": "<project_root>/environment/runtime-status.json",
+  "routing_file": "<project_root>/environment/task-routing.json",
+  "interpreters": {
+    "core": "<path to the training/data interpreter, e.g. D:/Envs/ml-core/python.exe>",
+    "timeseries": "<path to the time-series interpreter>",
+    "data": "<path to the data-tooling interpreter>"
+  },
+  "notes": [
+    "Copy this file to config.json next to SKILL.md (or point ML_WORKFLOW_CONFIG at it) and replace every <...> placeholder.",
+    "Leave an interpreter empty if you do not use that split; the router must then report it unavailable instead of guessing a PATH python."
+  ]
+}
