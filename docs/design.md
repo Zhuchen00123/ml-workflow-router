@@ -55,9 +55,10 @@ Consequences, accepted:
   dependency graphs genuinely conflict.
 - Preview: no installer, no schema migration story yet.
 
-## Roadmap (not promises)
+## Roadmap
 
-- [ ] Machine-checkable routing table schema.
-- [ ] `--check` mode that validates config paths and prints capability status.
+- [x] Machine-checkable config validation (`scripts/check.py`).
+- [x] `--check` mode that validates config paths and prints capability status.
+- [x] Worked example library layout (structure + self-written content).
+- [ ] Machine-checkable routing-table schema (beyond ad-hoc JSON parsing).
 - [ ] Optional probe that reports which experts are stale versus upstream.
-- [ ] Worked example library layout (structure only, no third-party content).

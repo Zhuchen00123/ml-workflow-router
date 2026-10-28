@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "library_root": "skill-library/experts",
+  "status_file": "environment/runtime-status.json",
+  "load_policy": "Read LOCAL-NOTES.md and the complete SKILL.md of the selected expert only. These names are directory names, not registered skill() capabilities.",
+  "routes": [
+    {
+      "task": "inspect_a_new_table_for_missingness_types_duplicates_and_leakage",
+      "primary": ["data-quality-triage"],
+      "helpers": [],
+      "environment": "core",
+      "deliverable": "A short written triage: column types, missingness by column, duplicate keys, suspicious leakage columns, and the split unit to use."
+    },
+    {
+      "task": "train_a_first_honest_baseline_on_tabular_data",
+      "primary": ["tabular-baseline"],
+      "helpers": ["data-quality-triage"],
+      "environment": "core",
+      "deliverable": "A reproducible baseline with a declared split, cross-validated score, holdout score, and the fitted pipeline saved."
+    },
+    {
+      "task": "export_a_result_figure_for_a_report",
+      "primary": ["figure-export"],
+      "helpers": [],
+      "environment": "core",
+      "deliverable": "A deterministic figure file plus the values it plots, at readable size."
+    }
+  ],
+  "rules": [
+    "Triage before training: a baseline on an unaudited table is a number without meaning.",
+    "One split definition, decided before any model sees the data.",
+    "Report the holdout once; do not tune against it.",
+    "A figure must be reproducible from saved numbers, not from a screenshot."
+  ]
+}

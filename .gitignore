@@ -1,5 +1,6 @@
-# Local, machine-specific configuration — do not commit
-config.json
+# Local, machine-specific configuration — do not commit.
+# Root-anchored on purpose: examples/ ships its own config.json and must be tracked.
+/config.json
 
 # Secrets and credentials that must never land in a public repo
 .env

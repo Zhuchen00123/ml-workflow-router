@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project_root": ".",
+  "expert_library": "skill-library/experts",
+  "status_file": "environment/runtime-status.json",
+  "routing_file": "environment/task-routing.json",
+  "interpreters": {
+    "core": ""
+  },
+  "notes": [
+    "Relative paths resolve against this file's directory, so the example works right after cloning.",
+    "interpreters.core is intentionally empty: an unset interpreter must be reported as unavailable, never replaced by a PATH python.",
+    "Fill it in with an absolute interpreter path to make --probe meaningful."
+  ]
+}

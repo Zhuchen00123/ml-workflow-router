@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "note": "Illustrative only. Every capability starts as unverified because nothing has been run in this example. Replace these entries with results from your own tests, and keep the failures.",
+  "capabilities": {
+    "read_csv_and_parquet": "unverified",
+    "fit_sklearn_pipeline": "unverified",
+    "export_png_figure": "unverified",
+    "gpu_training": "blocked"
+  },
+  "known_blockers": {
+    "gpu_training": {
+      "status": "blocked",
+      "symptom": "Example entry: the router must not imply GPU training works here.",
+      "root_cause": "No GPU timer or CUDA kernel check has been run in this example library.",
+      "unblock": "Run a real kernel + backward + synchronize on the target device, then record the device, architecture and versions."
+    }
+  },
+  "interpreters": {
+    "core": "unset in config.json"
+  }
+}

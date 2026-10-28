@@ -3,7 +3,7 @@ name: ml-workflow-router
 description: "Routes machine-learning and deep-learning work to a reviewed local expert library: dataset quality and ETL, classical baselines, PyTorch/Lightning training, Hugging Face and LoRA, time series, GNN, reinforcement learning, evaluation, SHAP, and experiment management. Use for explicit ML tasks or data preparation for ML; not generic programming, ordinary chat, or unrelated data questions."
 compatibility: "Requires a config.json (see config.example.json) pointing at an expert instruction library and explicit interpreter paths. No bundled experts, no automatic downloads or service startup."
 metadata:
-  version: "0.1.0-preview"
+  version: "0.1.1-preview"
   scope: "one global entry with an externally supplied expert library"
   license: "MIT"
 ---
@@ -85,6 +85,7 @@ not fetch a replacement from the network on your own initiative.
 | Training curves and experiment comparison | `tensorboard` |
 | Figures for results | `matplotlib` |
 | Local experiment/artifact registry | `mlflow` — if a plain local log is not enough |
+| Machine capacity/VRAM before a resource-heavy run | `get-available-resources` — only when the decision depends on it |
 | Diffusers image generation | `stable-diffusion-image-generation` |
 | Read-only remote dataset viewer queries | `huggingface-datasets` |
 | 3D Gaussian Splatting diagnosis / planning | `3dgs-training-debugger` / `3dgs-experiment-planner` |
